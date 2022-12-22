@@ -55,12 +55,26 @@ p,li,h3{
     justify-content: center;
 }
 
-.navbar .fa-shopping-cart{
+.navbar .cart{
     position: absolute;
     right: 6%;
     top: 20px;
     color: #474747;
 }
+
+.navbar .cart .dot{
+    position: absolute;
+    right: -9px;
+    bottom: -7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FFE788;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+} 
 
 .navbar .fa-home{
     position: absolute;
@@ -69,10 +83,19 @@ p,li,h3{
     color: #474747;
 }
 
-.hamburger {
+/* .iconr{
     position: absolute;
+    top: 23px;
+    right: 3%;
+    cursor: pointer;
+    display: block;
+    z-index: 200;
+} */
+
+.hamburger {
     width: 1.8rem;
     height: 1.3rem;
+    position: absolute;
     top: 23px;
     right: 3%;
     cursor: pointer;
