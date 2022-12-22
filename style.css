@@ -1,0 +1,353 @@
+/* * {
+    border: 1px solid black;
+} */
+
+body {
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    color: #B7B7B7;
+}
+
+/* 複寫區 */
+a {
+    text-decoration: none;
+}
+
+h3 {
+    color: #2F2623;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+p{
+    margin: 0;
+}
+
+p,li,h3{
+    Letter-spacing : 1px;
+}
+
+/* 按鈕 */
+.btn-blue {
+    width: 260px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: #7B7FB6;
+    color: #FFF;
+}
+
+
+/* 導覽列 */
+.navbar {
+    position: relative;
+    width: 100%;
+    height: 75px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .fa-shopping-cart{
+    position: absolute;
+    right: 6%;
+    top: 20px;
+    color: #474747;
+}
+
+.navbar .fa-home{
+    position: absolute;
+    left: 2%;
+    top: 22px;
+    color: #474747;
+}
+
+.hamburger {
+    position: absolute;
+    width: 1.8rem;
+    height: 1.3rem;
+    top: 23px;
+    right: 3%;
+    cursor: pointer;
+    display: block;
+    z-index: 200;
+}
+
+.hamburger div {
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #474747;
+    margin: 3px 0;
+    float: right;
+    transition: 0.3s ease-in;
+}
+
+.hamburger:hover .bar-1 {
+    width: 80%;
+}
+
+.hamburger:hover .bar-3 {
+    width: 60%;
+}
+
+.hamburger.active .bar-1 {
+    transform: rotate(-45deg);
+}
+
+.hamburger.active .bar-3 {
+    transform: rotate(45deg);
+}
+
+.hamburger.active .bar-2 {
+    background: transparent;
+}
+
+.hamburger.active .bar-1,
+.hamburger.active .bar-3 {
+    position: absolute;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.hamburger.active:hover .bar-1,
+.hamburger.active:hover .bar-3 {
+    width: 100%;
+}
+
+.textarea {
+    width: 80%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* 商品區 */
+.wrapper {
+    display: flex;
+    margin-top: 20px;
+    box-sizing: border-box;
+    align-items: flex-end;
+}
+
+.cards {
+    flex: 6;
+}
+
+.sidemenu ul {
+    list-style: none;
+    margin: 0 200px 0 10px;
+    padding-bottom: 40px;
+}
+
+.sidemenu li {
+    padding: 20px 0px;
+    transition: 0.5s;
+}
+
+.sidemenu li:hover {
+    color: #474747;
+}
+
+.product {
+    box-sizing: border-box;
+    width: 200px;
+}
+
+.product .product-link {
+    font-size: 18px;
+}
+
+.product .title {
+    margin: 10px 0 10px 0;
+}
+
+.product .pricetext{
+    color: #48468D;
+    display: inline-block;
+    font-weight: 1000;
+}
+
+.block1 {
+    /* background-color: #FFE788; */
+    width: 175px;
+    height: 175px;
+}
+
+.block1 img{
+    object-fit: cover;
+}
+
+.amount {
+    font-size: 10px;
+    margin: 6px 0px;
+}
+
+.item_container{
+    display: inline-block;
+}
+
+.g-icon{
+    position: relative;
+    width: 175px;
+}
+
+.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.icon .fa{
+    padding: 0 2px;
+}
+
+/* 商品分類按鈕 */
+.btn-98 {
+    position: relative;
+}
+
+
+.btn-98::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #474747;
+    position: absolute;
+    right: 0;
+    transition: .4s;
+    margin-top: 5px;
+}
+
+.btn-98:hover::after {
+    width: 100%;
+    left: 0;
+}
+.carousel .carousel-item {
+    /* min-height: 300px; */
+    max-height: 480px;
+    background-color: #474747;
+}
+
+.carousel .carousel-item img {
+    /* min-height: 300px; */
+    max-height: 480px;
+    object-fit: cover;
+}
+
+/* 購物車 */
+/* 漢堡選單 */
+
+
+/* 導覽頁介面 */
+.siteset {
+    position: absolute;
+    background: #48468D;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: 0.8s ease-out;
+    /* transform: translateX(200%); */
+    clip-path: circle(0px at 100% 0);
+    z-index: 199;
+}
+
+.siteset.active {
+    /* transform: translateX(0%); */
+    clip-path: circle(1200px at 50% 50%);
+    transition: 0.5s ease-in;
+}
+
+.item {
+    color: white;
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: #FFE788;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.item:not(:hover){
+    opacity: 0.8;
+    transition: 0.3s ease-in;
+}
+
+.gridmask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textnum {
+    font-size: 60px;
+    font-weight: 1000;
+}
+
+.g-text {
+    font-size: 30px;
+}
+
+
+.siteset>div[data-list="0"] {
+    background: url("image/0001.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="1"] {
+    background: url("image/0001.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="2"] {
+    background: url("image/0002.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="3"] {
+    background: url("image/0003.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="4"] {
+    background: url("image/0004.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="5"] {
+    background: url("image/0005.png");
+    background-size: cover;
+}
+
+.siteset>div[data-list="6"] {
+    background: url("image/0006.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.siteset>div[data-list="7"] {
+    background: url("image/0007.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+html body {
+    margin: 0;
+}
